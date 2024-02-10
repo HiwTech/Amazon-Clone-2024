@@ -59,12 +59,12 @@ function Header() {
               </select>
             </Link>
             {/* three components */}
-            <a href="">
+            <Link to="/auth">
               <div>
                 <p>Sign In</p>
                 <span>Account & Lists</span>
               </div>
-            </a>
+            </Link>
             {/* orders */}
             <Link to="/order">
               <p>return</p>

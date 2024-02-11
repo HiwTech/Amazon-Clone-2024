@@ -1,7 +1,7 @@
 
 import firebase from "firebase/compat/app";
 //auth
-import {getAuth } from "firebase"
+import {getAuth } from "firebase/auth"
 import "firebase/compat/firestore"
 import "firebase/compat/auth"
 import { appBarClasses } from "@mui/material";

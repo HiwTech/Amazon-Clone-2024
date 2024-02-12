@@ -4718,3 +4718,5 @@ SyntaxError: Unexpected token '}'
 
 [debug] [2024-02-11T19:22:44.952Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
 [info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}

@@ -36,6 +36,12 @@ if (!existingItem){
             newBasket.splice(index,1)
         }
     }
+     case Type.EMPTY_BASKET:
+        return {
+            ...state,
+            basket:[]
+        }
+
     return{
         ...state,
         basket:newBasket

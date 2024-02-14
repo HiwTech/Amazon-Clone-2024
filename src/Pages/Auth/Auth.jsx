@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import classes from './Auth.module.css'
-import { Link, useNavigate} from 'react-router-dom';
+import { Link, useNavigate, useLocation} from 'react-router-dom';
 import {auth} from '../../Utility/firebase'
 import {signInWithEmailAndPassword, createUserWithEmailAndPassword} from 'firebase/auth'
 import { DataContext} from '../../Components/DataProvider/DataProvider';
@@ -18,6 +18,9 @@ function Auth() {
     signUp:false
 
   })
+
+  const navStateData = useLocation()
+  console.log(navStateData)
 
   const [{user}, dispatch] = useContext(DataContext)
   const navigate = useNavigate()
@@ -37,7 +40,7 @@ function Auth() {
         user:userInfo.user
       })
       setLoading({...loading, signIn:false});
-      navigate("/")
+      navigate(navStateData?.state?.redirect ||"/");
     })
     .catch((err)=>{
      
@@ -54,7 +57,7 @@ function Auth() {
         user:userInfo.user,
       })
       setLoading({ ...loading, signUp:false });
-      navigate("/");
+      navigate(navStateData?.state?.redirect || "/");
     })
     .catch((err)=>{
       setError(err.message);
@@ -75,6 +78,12 @@ function Auth() {
       {/* form */}
       <div className={classes.login_container}>
         <h1>Sign In</h1>
+        {navStateData?.state?.msg && (
+          <small style={{ padding: "5px", textAlign: "center", color: "red", fontWeight:"bold" }}>
+            {navStateData?.state?.msg}
+          </small>
+        )}
+
         <form action="">
           <div>
             <label htmlFor="email">Email</label>
@@ -117,8 +126,11 @@ function Auth() {
           className={classes.login_registerButton}
           name="sinUp"
         >
-          {loading.signUp ? <ClipLoader color="#000" size={15} /> : "Create your Amazon Account"}
-          
+          {loading.signUp ? (
+            <ClipLoader color="#000" size={15} />
+          ) : (
+            "Create your Amazon Account"
+          )}
         </button>
 
         {error && (

@@ -45,7 +45,7 @@ function Header() {
               <option value="">All</option>
             </select>
             <input type="text" />
-            <IoSearch size={25} />
+            <IoSearch size={38} />
           </div>
           {/* right side link */}
           <div className={classes.order_container}>

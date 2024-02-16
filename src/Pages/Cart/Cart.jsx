@@ -33,16 +33,20 @@ function Cart() {
     });
   };
   //console.log(basket)
+
+  
   
   return (
     <LayOut>
       <section className={classes.container}>
         <div className={classes.cart_container}>
           <h2>Hello</h2>
-          <h3>Items in the cart : {basket?.length}</h3>
+          <h3>Items in the cart : {
+          
+          basket?.length}</h3>
           <hr />
           {basket?.length === 0 ? (
-            <p>Opps No item in your cart</p>
+            <p>No item in your cart</p>
           ) : (
             basket?.map((item, i) => {
               return (

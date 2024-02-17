@@ -70,3 +70,12 @@
   
 
 }
+
+@media screen and (max-width: 576px) {
+    .footer_container{
+        display:list-item;
+        flex-direction: column !important;
+        height: auto;
+        list-style: none;
+    }
+  }

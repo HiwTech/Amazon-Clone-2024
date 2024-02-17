@@ -42,6 +42,7 @@ React.useEffect(() => {
       <section className={classes.footer_inner_container}>
         <div className={classes.footer_container}>
           <div>
+            <p> Get to Know Us</p>
             <ul className={classes.footer_ul}>
               <li>Careers</li>
               <li>Amazon Newsletter</li>
@@ -93,7 +94,6 @@ React.useEffect(() => {
           </div>
         </div>
         <hr />
-     
       </section>
     </section>
   );

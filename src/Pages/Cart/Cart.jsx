@@ -11,6 +11,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 
 
+
 function Cart() {
 
   const [{basket, user}, dispatch] = useContext(DataContext);
@@ -19,6 +20,12 @@ function Cart() {
      return item.price * item.amount + amount
 
   },0)
+
+  const totalNoOfItem = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
+
+
 
   const increase =(item)=>{
     dispatch({
@@ -41,9 +48,7 @@ function Cart() {
       <section className={classes.container}>
         <div className={classes.cart_container}>
           <h2>Hello</h2>
-          <h3>Items in the cart : {
-          
-          basket?.length}</h3>
+          <h3>Items in the cart : {totalNoOfItem}</h3>
           <hr />
           {basket?.length === 0 ? (
             <p>No item in your cart</p>
@@ -51,18 +56,26 @@ function Cart() {
             basket?.map((item, i) => {
               return (
                 <section className={classes.product_cart}>
-                  
                   <ProductCard
                     product={item}
                     renderDescription={true}
                     flex={true}
                   />
                   <div className={classes.btn_container}>
-                    <button className={classes.btn} onClick={()=>increase(item)}><IoIosArrowUp size={30} /></button>
+                    <button
+                      className={classes.btn}
+                      onClick={() => increase(item)}
+                    >
+                      <IoIosArrowUp size={30} />
+                    </button>
                     <span>{item.amount}</span>
-                    <button className={classes.btn} onClick={()=>decrease(item.id)}><IoIosArrowDown size={30} /></button>
+                    <button
+                      className={classes.btn}
+                      onClick={() => decrease(item.id)}
+                    >
+                      <IoIosArrowDown size={30} />
+                    </button>
                   </div>
-                  
                 </section>
               );
             })
@@ -74,7 +87,7 @@ function Cart() {
             <div>
               <br />
               <br />
-              <p>Subtotal ({basket?.length} ) items</p>
+              <p>Subtotal ({totalNoOfItem} ) items</p>
               <CurrencyFormat amount={total} />
             </div>
             <span>

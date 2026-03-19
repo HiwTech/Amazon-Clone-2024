@@ -1,70 +1,88 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ 🛒 Amazon Clone (Full-Stack E-Commerce App)
 
-## Available Scripts
+A full-stack Amazon-inspired e-commerce application built with **React**, **Firebase**, and **Stripe**, featuring secure authentication, cart system, and real-time product management — designed as part of my portfolio to demonstrate end-to-end web development skills.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✅ User Authentication (Firebase )
+✅ Home Page with Dynamic Product Listing
+✅ Product Details & Add-to-Cart Functionality
+✅ Cart Page with Real-Time Updates
+✅ Checkout Page
+✅ Stripe Payment Integration
+✅ Order History Page
+✅ Responsive UI & Modern Design
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧠 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Frontend                         | Backend / Services                          | Tools        |
+| -------------------------------- | ------------------------------------------- | ------------ |
+| React, React Router, Context API | Firebase Authentication, Firebase Firestore | Stripe       |
+| CSS / Styled Components          | Firebase Hosting                            | Git & GitHub |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+├── src
+│   ├── components
+│   ├── pages
+│   ├── context
+│   ├── firebase.js
+│   ├── App.js
+│   └── index.js
+└── public
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## ⚙️ Installation & Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### ✅ Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Node.js & npm installed
+* Firebase project created
+* Stripe account & test keys
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 📦 Install dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+### 🔧 Add Firebase config
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Create a `.env` file:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+REACT_APP_FIREBASE_API_KEY=yourKeyHere
+REACT_APP_FIREBASE_AUTH_DOMAIN=yourdomain.firebaseapp.com
+REACT_APP_FIREBASE_PROJECT_ID=yourProjectID
+REACT_APP_STRIPE_PUBLIC_KEY=yourStripePublicKey
+```
 
-### Code Splitting
+### ▶️ Run Project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 💳 Stripe Test Card
 
-### Making a Progressive Web App
+Use this card to test payments (Stripe Test Mode):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+4242 4242 4242 4242
+Expiration: Any future date
+CVC: Any 3 digits
+```
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

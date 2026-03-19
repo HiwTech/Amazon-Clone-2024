@@ -1,21 +1,20 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom';
-import classes from "./Header.module.css"
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import classes from "./Header.module.css";
 import { IoSearch } from "react-icons/io5";
 import { BiCart } from "react-icons/bi";
 import { SlLocationPin } from "react-icons/sl";
-import LowerHeader from './LowerHeader';
-import {DataContext} from '../DataProvider/DataProvider'
-import {auth} from "../../Utility/firebase"
+import LowerHeader from "./LowerHeader";
+import { DataContext } from "../DataProvider/DataProvider";
+import { auth } from "../../Utility/firebase";
 
 function Header() {
-
-  const [{basket,user}, dispatch]=useContext(DataContext)
+  const [{ basket, user }, dispatch] = useContext(DataContext);
   // console.log(basket.length)
 
-  const totalItem = basket?.reduce((amount, item)=>{
-    return item.amount + amount
-  }, 0)
+  const totalItem = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
   return (
     <section className={classes.fixed}>
       <section>
@@ -34,8 +33,7 @@ function Header() {
                 <SlLocationPin />
               </span>
               <div>
-                <p>Delvered to</p>
-                <span>Ethiopia</span>
+                <p>Delivered to your door</p>
               </div>
             </div>
           </div>
@@ -65,7 +63,7 @@ function Header() {
                 {user ? (
                   <>
                     <p>Hello {user?.email?.split("@")[0]}</p>
-                    <span onClick={()=>auth.signOut()}>Sing Out</span>
+                    <span onClick={() => auth.signOut()}>Sing Out</span>
                   </>
                 ) : (
                   <>
@@ -93,4 +91,4 @@ function Header() {
   );
 }
 
-export default Header
+export default Header;

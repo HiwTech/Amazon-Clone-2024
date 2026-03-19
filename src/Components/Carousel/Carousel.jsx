@@ -5,8 +5,10 @@ import {img} from './img/data'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; import LayOut from '../LayOut/LayOut';
 
 function CarouselEffect() {
-  return (
  
+ 
+  return (
+  
     <div>
         <Carousel 
         autoPlay={true}
@@ -17,6 +19,7 @@ function CarouselEffect() {
       {
         img.map((imageItemLink)=>{
             return<img key={imageItemLink} src={imageItemLink}/>
+
         })
       }
         </Carousel>

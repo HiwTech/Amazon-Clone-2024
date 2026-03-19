@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 import { IoMdMenu } from "react-icons/io";
-import classes from "./Header.module.css"
+import classes from "./Header.module.css";
 
 function LowerHeader() {
   return (
@@ -11,7 +11,7 @@ function LowerHeader() {
           <p>All</p>
         </li>
         <li>Today's Deals</li>
-        <li>Coustmer Service</li>
+        <li>Customer Service</li>
         <li>Registration</li>
         <li>Gift Cards</li>
         <li>Sell</li>
@@ -20,4 +20,4 @@ function LowerHeader() {
   );
 }
 
-export default LowerHeader
+export default LowerHeader;

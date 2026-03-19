@@ -58,7 +58,7 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <p>Amazon Payment Products</p>
+            <p>Payment Products</p>
             <ul className={classes.footer_ul}>
               <li>Visa</li>
               <li>Gift Cards</li>
